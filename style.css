@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("./carparking.jpg");
+  height: 100%;
+  /* background-position: center;
+    background-repeat: no-repeat; */
+  background-size: cover;
+}
+
+.container {
+  width: 95%;
+  margin: 30px 20px;
+  text-align: center;
+  font-family: sans-serif;
+  font-style: normal;
+}
+
+.heading-row {
+  display: flex;
+  justify-content: end;
+}
+
+.parking-animation {
+  color: #3ecf8e;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h1 {
+  color: #3ecf8e;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+h2 {
+  color: #555;
+}
+
+#parkingLot {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 20px;
+  height: 200px;
+  position: relative;
+  border: 2px solid #333;
+  background-color: #eaeaea;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.spot {
+  width: 120px;
+  height: 180px;
+  border: 2px dashed #333;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  color: #333;
+  font-weight: bold;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.spot:hover {
+  background-color: #d1e7dd;
+}
+
+.car {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 200px;
+  transition: top 2s ease-in-out, transform 0.5s ease-in-out;
+  margin-top: 10px;
+}
+
+.parked {
+  top: 0;
+  opacity: 1;
+}
+
+.leaving {
+  transform: translateY(200px);
+  opacity: 0;
+}
+
+#carList,
+#spotList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#carList li,
+#spotList li {
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+#carList li:hover,
+#spotList li:hover {
+  background-color: #eaeaea;
+}
+
+button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin: 5px 0;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+.park1 {
+  opacity: 5;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.application-title {
+  font-family: "Liberty";
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 700;
+  flex-flow: row;
+  color: #d9fdff;
+  text-shadow: 0 0 2rem #00f0ff;
+  letter-spacing: 1px;
+  transform: translate(-0.2rem, 1rem) rotate(10deg);
+  -webkit-animation: flicker 2s ease-in-out infinite alternate;
+  animation: flicker 2s ease-in-out infinite alternate;
+}
+
+.application-subtitle {
+  font-size: 28px !important;
+  font-weight: 600 !important;
+}
+
+.hideparkinglot {
+  display: none;
+}
+
+.showparkinglot {
+  display: flex !important;
+}
+
+.hidedeadlockstatus {
+  display: none;
+}
+
+.showdeadlockstatus {
+  display: flex !important;
+}
+
+@-webkit-keyframes flicker {
+  0% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  5% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  5.5% {
+    opacity: 0;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  6.5% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  7% {
+    opacity: 0;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  8% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(13deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  5% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  5.5% {
+    opacity: 0;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  6.5% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  7% {
+    opacity: 0;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  8% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(13deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+}

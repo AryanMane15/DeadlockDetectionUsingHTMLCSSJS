@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deadlock Detection Details</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="d-flex flex-column bd-highlight align-items-center mt-5 mb-2">
+      <div class="p-2 text-uppercase font-weight-bold">
+        <b class="application-title">Deadlock Detection</b>
+      </div>
+    </div>
+    <div div class="card ml-5" style="margin: 2rem; padding: 1rem; width: 45%">
+      <p>
+        <strong>Deadlock detection</strong> is a technique used in operating
+        systems and concurrent systems to identify a deadlock, a situation where
+        a set of processes are blocked because each process holds a resource and
+        waits for another resource held by another process. In this scenario,
+        none of the processes can proceed, leading to a system halt. Deadlock
+        detection involves monitoring resource allocation and process requests
+        to spot such conditions. The system may use a directed graph called a
+        Wait-for Graph (WFG) to represent the relationships between processes
+        and resources. If a cycle is detected in the WFG, a deadlock exists.
+        Once detected, the system may recover by terminating one or more
+        processes or preempting resources. Deadlock detection is necessary in
+        systems where avoidance or prevention is impractical, and it usually
+        comes with a performance cost due to continuous monitoring. <br />
+        <a
+          href="file:///D:/USER%20PROFILE/Downloads/New%20folder1/osy%20folder/Deadlockdetection/example.html"
+          >Deadlock detection example</a
+        >
+      </p>
+      <ol>
+        <b>Advantages:</b>
+        <li>Efficient resource utilization without strict protocols.</li>
+        <li>Allows dynamic resource requests, offering system flexibility.</li>
+      </ol>
+      <ol>
+        <b>Disadvantages:</b>
+        <li>High computational overhead for detection.</li>
+        <li>
+          Recovery from deadlocks can be complex and may lead to process
+          termination or data loss.
+        </li>
+      </ol>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
